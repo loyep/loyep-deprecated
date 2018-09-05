@@ -27,11 +27,8 @@ class QueryListener
     {
         if ( App::environment('local') ) {
             $sql = str_replace("?", "'%s'", $event->sql);
-
             $log = vsprintf($sql, $event->bindings);
-
             $log = '[' . date('Y-m-d H:i:s') . '] ' . $log . "\r\n";
-
             Log::info($log);
         }
     }
