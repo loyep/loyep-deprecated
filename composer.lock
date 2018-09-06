@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96b707c6438309239e66631efba4ca49",
+    "content-hash": "1f1cf3286a57aadfda559d56319bf280",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -741,12 +741,12 @@
             "time": "2018-08-22T07:45:22+00:00"
         },
         {
-            "name": "loyep/planet",
+            "name": "loyep/framework",
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "./planet",
-                "reference": "e0a7ef5ec375954c6215e86455952cd8d365e879",
+                "url": "./loyep",
+                "reference": "899aac753b63af08de246e35b6c0fb12feb34d6d",
                 "shasum": null
             },
             "require": {
@@ -767,7 +767,7 @@
                         "Loyep\\Planet\\PlanetServiceProvider"
                     ],
                     "aliases": {
-                        "Planet": "Loyep\\Planet\\Planet"
+                        "Planet": "Loyep\\Planet\\Facades\\Planet"
                     }
                 }
             },

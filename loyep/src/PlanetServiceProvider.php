@@ -23,6 +23,8 @@ class PlanetServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('planet', function () {
+            return new Planet();
+        });
     }
 }
