@@ -10,7 +10,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "./loyep"
+            "url": "loyep/planet"
         }
     ],
     "require": {
@@ -18,7 +18,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "loyep/framework": "*"
+        "loyep/planet": "^1.0@dev"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

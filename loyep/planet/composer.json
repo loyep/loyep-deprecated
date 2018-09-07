@@ -1,5 +1,5 @@
 {
-    "name": "loyep/framework",
+    "name": "loyep/planet",
     "description": "",
     "keywords": [
         "laravel",
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Loyep\\": "src/"
+            "Loyep\\Planet\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Loyep\\Tests\\": "tests/"
+            "Loyep\\Planet\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -36,10 +36,10 @@
         },
         "laravel": {
             "providers": [
-                "Loyep\\LoyepServiceProvider"
+                "Loyep\\Planet\\PlanetServiceProvider"
             ],
             "aliases": {
-                "Loyep": "Loyep\\Facades\\Loyep"
+                "Planet": "Loyep\\Planet\\Facades\\Planet"
             }
         }
     },

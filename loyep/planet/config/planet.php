@@ -37,5 +37,5 @@ return [
     |
     */
 
-    'path' => '/planet',
+    'path' => 'planet',
 ];

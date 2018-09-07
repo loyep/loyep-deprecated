@@ -1,6 +1,6 @@
 <?php
 
-namespace Loyep\Http\Controllers\Auth;
+namespace Loyep\Planet\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Loyep\Http\Controllers\Controller;

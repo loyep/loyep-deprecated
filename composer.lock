@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f1cf3286a57aadfda559d56319bf280",
+    "content-hash": "b002cff636422b65235e15da11d29ca1",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -742,12 +742,12 @@
             "time": "2018-08-22T07:45:22+00:00"
         },
         {
-            "name": "loyep/framework",
+            "name": "loyep/planet",
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "./loyep",
-                "reference": "1a3dfc701dda41e11555686262f4ac8679fdbfa0",
+                "url": "loyep/planet",
+                "reference": "b83879b1d02d6e37d4d57dcf7f94c2550573820e",
                 "shasum": null
             },
             "require": {
@@ -765,21 +765,21 @@
                 },
                 "laravel": {
                     "providers": [
-                        "Loyep\\LoyepServiceProvider"
+                        "Loyep\\Planet\\PlanetServiceProvider"
                     ],
                     "aliases": {
-                        "Loyep": "Loyep\\Facades\\Loyep"
+                        "Planet": "Loyep\\Planet\\Facades\\Planet"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Loyep\\": "src/"
+                    "Loyep\\Planet\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Loyep\\Tests\\": "tests/"
+                    "Loyep\\Planet\\Tests\\": "tests/"
                 }
             },
             "license": [
@@ -4112,7 +4112,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "loyep/planet": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

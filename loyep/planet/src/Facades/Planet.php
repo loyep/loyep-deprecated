@@ -4,7 +4,7 @@ namespace Loyep\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Loyep extends Facade
+class Planet extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class Loyep extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'loyep';
+        return 'planet';
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Loyep;
+namespace Loyep\Planet;
 
-class Loyep
+class Planet
 {
     /**
      * Create a new Planet instance.
@@ -24,7 +24,7 @@ class Loyep
     {
         $router = app()->make('router');
 
-        $namespace = '\Loyep\Http\Controllers';
+        $namespace = '\Loyep\Planet\Http\Controllers';
 
         $router->namespace($namespace)->prefix('admin')->group(function () use ($router) {
             // Authentication Routes...
@@ -56,7 +56,7 @@ class Loyep
 
     public function name()
     {
-        return config('loyep.name', 'Loyep');
+        return config('loyep.name', 'Planet');
     }
 
 }
