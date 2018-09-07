@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Loyep\\Planet\\": "src/"
+            "Loyep\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Loyep\\Planet\\Tests\\": "tests/"
+            "Loyep\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -36,10 +36,10 @@
         },
         "laravel": {
             "providers": [
-                "Loyep\\Planet\\PlanetServiceProvider"
+                "Loyep\\LoyepServiceProvider"
             ],
             "aliases": {
-                "Planet": "Loyep\\Planet\\Facades\\Planet"
+                "Loyep": "Loyep\\Facades\\Loyep"
             }
         }
     },

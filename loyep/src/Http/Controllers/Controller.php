@@ -1,6 +1,6 @@
 <?php
 
-namespace Loyep\Planet\Http\Controllers;
+namespace Loyep\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Loyep\Planet\Facades;
+namespace Loyep\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Planet extends Facade
+class Loyep extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class Planet extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'planet';
+        return 'loyep';
     }
 }

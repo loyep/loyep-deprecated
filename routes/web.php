@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Planet::routes();
+Loyep::routes();

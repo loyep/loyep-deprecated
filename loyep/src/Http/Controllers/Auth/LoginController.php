@@ -1,9 +1,9 @@
 <?php
 
-namespace Loyep\Planet\Http\Controllers\Auth;
+namespace Loyep\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Loyep\Planet\Http\Controllers\Controller;
+use Loyep\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {

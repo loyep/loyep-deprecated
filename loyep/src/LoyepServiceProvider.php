@@ -1,10 +1,10 @@
 <?php
 
-namespace Loyep\Planet;
+namespace Loyep;
 
 use Illuminate\Support\ServiceProvider;
 
-class PlanetServiceProvider extends ServiceProvider
+class LoyepServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
@@ -23,8 +23,8 @@ class PlanetServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('planet', function () {
-            return new Planet();
+        $this->app->singleton('loyep', function () {
+            return new Loyep();
         });
     }
 }
