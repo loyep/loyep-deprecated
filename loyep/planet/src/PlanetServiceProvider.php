@@ -16,6 +16,8 @@ class PlanetServiceProvider extends ServiceProvider
         if ( $this->app->runningInConsole() ) {
             $this->registerPublishing();
         }
+
+        $this->registerResources();
     }
 
     /**
@@ -27,7 +29,7 @@ class PlanetServiceProvider extends ServiceProvider
     {
 
         $this->publishes([
-            __DIR__.'/Console/Commands/stubs/PlanetServiceProvider.stub' => app_path('Providers/PlanetServiceProvider.php'),
+            __DIR__ . '/Console/Commands/stubs/PlanetServiceProvider.stub' => app_path('Providers/PlanetServiceProvider.php'),
         ], 'planet-provider');
 
         $this->publishes([
@@ -49,6 +51,24 @@ class PlanetServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../database/migrations' => database_path('migrations'),
         ], 'planet-migrations');
+    }
+
+    /**
+     * Register the package resources such as routes, templates, etc.
+     *
+     * @return void
+     */
+    protected function registerResources()
+    {
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'planet');
+//        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'nova');
+//        $this->loadJsonTranslationsFrom(resource_path('lang/vendor/nova'));
+//
+//        if (Nova::runsMigrations()) {
+//            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+//        }
+//
+//        $this->registerRoutes();
     }
 
     /**

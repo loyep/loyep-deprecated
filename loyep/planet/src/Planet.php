@@ -24,25 +24,12 @@ class Planet
      */
     public function routes(array $options = [])
     {
-        $this->registerRoutes();
-    }
-
-    /**
-     * Register the package routes.
-     *
-     * @return void
-     */
-    protected function registerRoutes()
-    {
-        Route::group($this->routeConfiguration(), function () {
+        Route::group($this->routeConfiguration(), function () use ($options) {
 
             Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
             Route::post('login', 'Auth\LoginController@login');
             Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-            // Registration Routes...
-            Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-            Route::post('register', 'Auth\RegisterController@register');
 
             // Password Reset Routes...
             Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
@@ -50,6 +37,11 @@ class Planet
             Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
             Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
+            if ( $options['register'] ?? false ) {
+                // Registration Routes...
+                Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+                Route::post('register', 'Auth\RegisterController@register');
+            }
         });
     }
 

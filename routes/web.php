@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('planet::layout');
 });
 
 //Auth::routes(['verify' => true]);
