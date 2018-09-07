@@ -1,6 +1,6 @@
 {
     "name": "loyep/planet",
-    "description": "",
+    "description": "A web site framework base laravel. ",
     "keywords": [
         "laravel",
         "admin"
