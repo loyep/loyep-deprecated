@@ -4,6 +4,7 @@ namespace Loyep\Planet\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
+use Loyep\Planet\Facades\Planet;
 use Loyep\Planet\Http\Controllers\Controller;
 
 //use App\User;
@@ -30,7 +31,7 @@ class RegisterController extends Controller
      */
     protected function redirectPath()
     {
-        return '/home';
+        return Planet::path();
     }
 
     /**
@@ -41,6 +42,16 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return view('planet::auth.register');
     }
 
     /**

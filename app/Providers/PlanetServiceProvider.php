@@ -24,7 +24,7 @@ class PlanetServiceProvider extends ServiceProvider
      */
     protected function routes()
     {
-        Planet::routes();
+        Planet::routes(['register' => true]);
     }
 
     /**

@@ -31,6 +31,8 @@ class Planet
             Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 
+            Route::get('/', 'PlanetController@home')->name('home');
+
             // Password Reset Routes...
             Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
             Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
@@ -53,9 +55,10 @@ class Planet
     protected function routeConfiguration()
     {
         return [
-            'namespace' => 'Loyep\Planet\Http\Controllers',
+            'namespace' => '\Loyep\Planet\Http\Controllers',
             'as' => 'planet.',
             'prefix' => Planet::path(),
+            'middleware' => ['web'],
         ];
     }
 

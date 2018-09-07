@@ -3,6 +3,8 @@
 namespace Loyep\Planet\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\VerifiesEmails;
+use Illuminate\Http\Request;
+use Loyep\Planet\Facades\Planet;
 use Loyep\Planet\Http\Controllers\Controller;
 
 class VerificationController extends Controller
@@ -27,7 +29,7 @@ class VerificationController extends Controller
      */
     protected function redirectPath()
     {
-        return '/home';
+        return Planet::path();
     }
 
     /**
@@ -40,5 +42,18 @@ class VerificationController extends Controller
         $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
+    }
+
+    /**
+     * Show the email verification notice.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request)
+    {
+        return $request->user()->hasVerifiedEmail()
+            ? redirect($this->redirectPath())
+            : view('planet::auth.verify');
     }
 }

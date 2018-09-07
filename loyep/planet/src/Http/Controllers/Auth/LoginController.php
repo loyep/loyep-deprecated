@@ -3,6 +3,8 @@
 namespace Loyep\Planet\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Routing\Route;
+use Loyep\Planet\Facades\Planet;
 use Loyep\Planet\Http\Controllers\Controller;
 
 class LoginController extends Controller
@@ -27,7 +29,7 @@ class LoginController extends Controller
      */
     protected function redirectPath()
     {
-        return '/home';
+        return Planet::path();
     }
 
     /**
@@ -38,5 +40,15 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLoginForm()
+    {
+        return view('planet::auth.login');
     }
 }

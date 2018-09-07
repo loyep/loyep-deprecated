@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Loyep\Planet\Http\Controllers;
 
-class HomeController extends Controller
+class PlanetController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -11,7 +11,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -19,8 +19,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function home()
     {
-        return view('home');
+        return view('planet::home');
     }
+
+
 }
