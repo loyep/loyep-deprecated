@@ -4,7 +4,7 @@ namespace Loyep\Planet\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
-use Loyep\Http\Controllers\Controller;
+use Loyep\Planet\Http\Controllers\Controller;
 
 //use App\User;
 

@@ -2,6 +2,8 @@
 
 namespace Loyep\Planet;
 
+use Illuminate\Support\Facades\Route;
+
 class Planet
 {
     /**
@@ -22,29 +24,31 @@ class Planet
      */
     public function routes(array $options = [])
     {
-        $router = app()->make('router');
+//        $router = app()->make('router');
 
-        $namespace = '\Loyep\Planet\Http\Controllers';
+        $namespace = 'Loyep\Planet\Http\Controllers';
 
-        $router->namespace($namespace)->prefix('admin')->group(function () use ($router) {
+        Route::namespace($namespace)->as('planet.')->group(function () {
+
+            //        $router->namespace($namespace)->prefix('admin')->group(function () use ($router) {
             // Authentication Routes...
-            $router->get('login', 'Auth\LoginController@showLoginForm')->name('login');
-            $router->post('login', 'Auth\LoginController@login');
-            $router->post('logout', 'Auth\LoginController@logout')->name('logout');
+            Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+            Route::post('login', 'Auth\LoginController@login');
+            Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
             // Registration Routes...
-            $router->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-            $router->post('register', 'Auth\RegisterController@register');
+            Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+            Route::post('register', 'Auth\RegisterController@register');
 
             // Password Reset Routes...
-            $router->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-            $router->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-            $router->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-            $router->post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+            Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+            Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+            Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+            Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
             // Email Verification Routes...
 //            if ( $options['verify'] ?? false ) {
-//                $router->emailVerification();
+//                Route::emailVerification();
 //            }
         });
     }

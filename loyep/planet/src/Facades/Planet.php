@@ -1,6 +1,6 @@
 <?php
 
-namespace Loyep\Facades;
+namespace Loyep\Planet\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

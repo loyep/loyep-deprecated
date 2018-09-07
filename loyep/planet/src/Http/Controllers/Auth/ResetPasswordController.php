@@ -3,7 +3,7 @@
 namespace Loyep\Planet\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\ResetsPasswords;
-use Loyep\Http\Controllers\Controller;
+use Loyep\Planet\Http\Controllers\Controller;
 
 class ResetPasswordController extends Controller
 {
