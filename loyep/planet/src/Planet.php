@@ -24,14 +24,18 @@ class Planet
      */
     public function routes(array $options = [])
     {
-//        $router = app()->make('router');
+        $this->registerRoutes();
+    }
 
-        $namespace = 'Loyep\Planet\Http\Controllers';
+    /**
+     * Register the package routes.
+     *
+     * @return void
+     */
+    protected function registerRoutes()
+    {
+        Route::group($this->routeConfiguration(), function () {
 
-        Route::namespace($namespace)->as('planet.')->group(function () {
-
-            //        $router->namespace($namespace)->prefix('admin')->group(function () use ($router) {
-            // Authentication Routes...
             Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
             Route::post('login', 'Auth\LoginController@login');
             Route::post('logout', 'Auth\LoginController@logout')->name('logout');
@@ -46,21 +50,31 @@ class Planet
             Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
             Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
-            // Email Verification Routes...
-//            if ( $options['verify'] ?? false ) {
-//                Route::emailVerification();
-//            }
         });
+    }
+
+    /**
+     * Get the Nova route group configuration array.
+     *
+     * @return array
+     */
+    protected function routeConfiguration()
+    {
+        return [
+            'namespace' => 'Loyep\Planet\Http\Controllers',
+            'as' => 'planet.',
+            'prefix' => Planet::path(),
+        ];
     }
 
     public function path()
     {
-        return config('loyep.path', 'admin');
+        return config('planet.path', 'admin');
     }
 
     public function name()
     {
-        return config('loyep.name', 'Planet');
+        return config('planet.name', 'Planet');
     }
 
 }
