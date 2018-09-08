@@ -4,6 +4,11 @@ namespace Loyep\Planet\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * @method static mixed routes(array $options = [])
+ *
+ * @see \Loyep\Planet\Planet
+ */
 class Planet extends Facade
 {
     /**
