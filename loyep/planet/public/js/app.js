@@ -94,7 +94,8 @@ module.exports = g;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(2);
+__webpack_require__(2);
+module.exports = __webpack_require__(11);
 
 
 /***/ }),
@@ -11769,6 +11770,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-299e239e", module.exports)
   }
 }
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
