@@ -1,4 +1,4 @@
-@extends('planet::layout')
+@extends('planet::auth.layout')
 
 @section('content')
     <div class="container">
@@ -84,4 +84,4 @@
             </div>
         </div>
     </div>
-@endsection
+@endSection

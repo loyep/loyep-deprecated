@@ -2,7 +2,7 @@
 
 namespace Loyep\Planet\Models;
 
-class Meta extends Model
+class Meta extends Resource
 {
 
 }

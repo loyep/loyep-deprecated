@@ -2,7 +2,7 @@
 
 namespace Loyep\Planet\Traits;
 
-trait Resource
+trait HasPermission
 {
-    
+
 }

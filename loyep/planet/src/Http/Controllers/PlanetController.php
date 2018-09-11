@@ -21,7 +21,7 @@ class PlanetController extends Controller
      */
     public function home()
     {
-        return view('planet::home');
+        return view('planet::dashboard');
     }
 
 
