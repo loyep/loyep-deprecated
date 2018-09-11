@@ -36,9 +36,14 @@
 <!-- Sidebar -->
 <aside class="sidebar sidebar-icons-right sidebar-icons-boxed sidebar-expand-lg">
     <header class="sidebar-header">
-        <a class="logo-icon" href="{{ Planet::path() }}"><img src="/planet-assets/img/logo-icon-light.png" alt="logo icon"></a>
+        <a class="logo-icon" href="{{ Planet::path() }}">
+            <img src="/planet-assets/img/logo-icon-light.png" alt="logo icon">
+        </a>
         <span class="logo">
-          <a href="{{ Planet::path() }}"><img src="/planet-assets/img/logo-light.png" alt="logo"></a>
+            <a href="{{ Planet::path() }}">
+                {{ str_replace(' ', '',ucwords(Planet::name())) }}
+                {{--<img src="/planet-assets/img/logo-light.png" alt="logo">--}}
+            </a>
         </span>
         <span class="sidebar-toggle-fold"></span>
     </header>
@@ -46,7 +51,9 @@
     <nav class="sidebar-navigation">
         <ul class="menu">
 
-            <li class="menu-category">Category 1</li>
+            {{--<li class="menu-category">Dashboard</li>--}}
+
+            <li class="menu-divider"></li>
 
             <li class="menu-item active">
                 <a class="menu-link" href="../dashboard/general.html">
@@ -54,6 +61,8 @@
                     <span class="title">Dashboard</span>
                 </a>
             </li>
+
+            <li class="menu-divider"></li>
 
             <li class="menu-item">
                 <a class="menu-link" href="#">
@@ -78,9 +87,6 @@
                     </li>
                 </ul>
             </li>
-
-
-            <li class="menu-category">Category 2</li>
 
 
             <li class="menu-item">
@@ -128,7 +134,28 @@
     </div>
 
     <div class="topbar-right">
+        <div class="topbar-divider"></div>
+
         <ul class="topbar-btns">
+            <li class="dropdown">
+                <span class="topbar-btn" data-toggle="dropdown">
+                    <img class="avatar" src="https://secure.gravatar.com/avatar/{{ md5(Auth::user()->email) }}?size=512"
+                         alt="..."></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="page/profile.html"><i class="ti-user"></i> Profile</a>
+                    <a class="dropdown-item" href="page-app/mailbox.html">
+                        <div class="flexbox">
+                            <i class="ti-email"></i>
+                            <span class="flex-grow">Inbox</span>
+                            <span class="badge badge-pill badge-info">5</span>
+                        </div>
+                    </a>
+                    <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="page-extra/user-lock-1.html"><i class="ti-lock"></i> Lock</a>
+                    <a class="dropdown-item" href="page-extra/user-login-3.html"><i class="ti-power-off"></i> Logout</a>
+                </div>
+            </li>
 
             <!-- Notifications -->
             <li class="dropdown d-none d-md-block">
@@ -214,24 +241,10 @@
     <footer class="site-footer">
         <div class="row">
             <div class="col-md-6">
-                <p class="text-center text-md-left">Copyright © 2018 <a href="http://thetheme.io/theadmin">TheAdmin</a>.
+                <p class="text-center text-md-left">Copyright
+                    © {{ date('Y') }}
+                    <a href="https://loyep.com" class="text-primary dim no-underline">Loyep</a>.
                     All rights reserved.</p>
-            </div>
-
-            <div class="col-md-6">
-                <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../help/articles.html">Documentation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../help/faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://themeforest.net/item/theadmin-responsive-bootstrap-4-admin-dashboard-webapp-template/20475359?license=regular&amp;open_purchase_for_item_id=20475359&amp;purchasable=source&amp;ref=thethemeio">Purchase
-                            Now</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </footer>

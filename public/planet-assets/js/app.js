@@ -334,7 +334,7 @@ jQuery.fn.scrollToEnd = function() {
 
 
 
-  // Load a CSS file and insert ot after core.css.min
+  // Load a CSS file and insert ot after core.sass.min
   //
   app.loadStyle = function(url, base) {
     if ( url == '' ) {
@@ -748,7 +748,7 @@ jQuery.fn.scrollToEnd = function() {
         return;
       }
 
-      // Load css files
+      // Load sass files
       if ( 'css' in vendor ) {
         app.loadStyle(vendor.css, app.dir.vendor);
       }
@@ -808,7 +808,7 @@ jQuery.fn.scrollToEnd = function() {
       }
 
 
-      // Load css files
+      // Load sass files
       if ( 'css' in vendor ) {
         app.loadStyle(vendor.css, app.dir.vendor);
       }
@@ -949,7 +949,7 @@ jQuery.fn.scrollToEnd = function() {
         return;
       }
 
-      // Load css files
+      // Load sass files
       if ( 'css' in vendor ) {
         app.loadStyle(vendor.css, app.dir.vendor);
       }
@@ -1129,7 +1129,7 @@ jQuery.fn.scrollToEnd = function() {
       selector: 'quill',
       callback: 'initQuill',
       css:      [
-                  //'highlight/styles/monokai-sublime.css',
+                  //'highlight/styles/monokai-sublime.sass',
                   'quill/quill.bubble.css',
                   'quill/quill.snow.css',
                 ],
@@ -1162,7 +1162,7 @@ jQuery.fn.scrollToEnd = function() {
     selectpicker: {
       selector: 'selectpicker',
       callback: 'initSelectpicker',
-      css:      'bootstrap-select/css/bootstrap-select.min.css',
+      css:      'bootstrap-select/sass/bootstrap-select.min.css',
       js:       'bootstrap-select/js/bootstrap-select.min.js',
     },
 
@@ -1170,7 +1170,7 @@ jQuery.fn.scrollToEnd = function() {
     datepicker: {
       selector: 'datepicker',
       callback: 'initDatepicker',
-      css:      'bootstrap-datepicker/css/bootstrap-datepicker3.min.css',
+      css:      'bootstrap-datepicker/sass/bootstrap-datepicker3.min.css',
       js:       'bootstrap-datepicker/js/bootstrap-datepicker.min.js',
     },
 
@@ -1294,22 +1294,22 @@ jQuery.fn.scrollToEnd = function() {
     //
     iconMaterial: {
       selector: '$ .material-icons',
-      css:      'material-icons/css/material-icons.css',
+      css:      'material-icons/sass/material-icons.css',
     },
 
 
     icon7Stroke: {
       selector: '$ [class*="pe-7s-"]',
       css:      [
-                  'pe-icon-7-stroke/css/pe-icon-7-stroke.min.css',
-                  'pe-icon-7-stroke/css/helper.min.css'
+                  'pe-icon-7-stroke/sass/pe-icon-7-stroke.min.css',
+                  'pe-icon-7-stroke/sass/helper.min.css'
                 ]
     },
 
 
     iconIon: {
       selector: '$ [class*="ion-"]',
-      css:      'ionicons/css/ionicons.min.css',
+      css:      'ionicons/sass/ionicons.min.css',
     },
 
 
@@ -1333,7 +1333,7 @@ jQuery.fn.scrollToEnd = function() {
     map: {
       selector: 'map',
       callback: 'initMap',
-      css:      '',
+      sass:      '',
       js:       'https://maps.googleapis.com/maps/api/js?key='+ app.defaults.googleApiKey +'&callback=app.map',
     },
     */
@@ -1390,7 +1390,7 @@ jQuery.fn.scrollToEnd = function() {
     datatables: {
       selector: 'datatables',
       callback: 'initDatatables',
-      css:      'datatables/css/dataTables.bootstrap4.min.css',
+      css:      'datatables/sass/dataTables.bootstrap4.min.css',
       js:       [
                   'datatables/js/jquery.dataTables.min.js',
                   'datatables/js/dataTables.bootstrap4.min.js',
@@ -1431,7 +1431,7 @@ jQuery.fn.scrollToEnd = function() {
     shepherd: {
       selector: 'shepherd',
       callback: 'initShepherd',
-      css:      'shepherd/css/shepherd-theme-arrows-plain-buttons.css',
+      css:      'shepherd/sass/shepherd-theme-arrows-plain-buttons.css',
       js:       [
                   'shepherd/js/tether.js',
                   'shepherd/js/shepherd.min.js',
@@ -1464,7 +1464,7 @@ jQuery.fn.scrollToEnd = function() {
     swiper: {
       selector: 'swiper',
       callback: 'initSwiper',
-      css:      'swiper/css/swiper.min.css',
+      css:      'swiper/sass/swiper.min.css',
       js:       'swiper/js/swiper.min.js',
     },
 
@@ -1491,7 +1491,7 @@ jQuery.fn.scrollToEnd = function() {
     dropify: {
       selector: 'dropify',
       callback: 'initDropify',
-      css:      'dropify/css/dropify.min.css',
+      css:      'dropify/sass/dropify.min.css',
       js:       'dropify/js/dropify.min.js',
     },
 
@@ -1523,7 +1523,7 @@ jQuery.fn.scrollToEnd = function() {
     justified: {
       selector: 'justified-gallery',
       callback: 'initJustifiedGallery',
-      css:      'justified-gallery/css/justifiedGallery.min.css',
+      css:      'justified-gallery/sass/justifiedGallery.min.css',
       js:       'justified-gallery/js/jquery.justifiedGallery.min.js',
     },
 
@@ -2118,10 +2118,10 @@ jQuery.fn.scrollToEnd = function() {
           /*
           $LAB.script('highlight/highlight.pack.js');
           if ( options.codeStyle === undefined ) {
-            app.loadStyle('highlight/styles/monokai-sublime.css', app.dir.vendor);
+            app.loadStyle('highlight/styles/monokai-sublime.sass', app.dir.vendor);
           }
           else {
-            app.loadStyle('highlight/styles/'+ options.codeStyle +'.css', app.dir.vendor);
+            app.loadStyle('highlight/styles/'+ options.codeStyle +'.sass', app.dir.vendor);
           }
           */
 

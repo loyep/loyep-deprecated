@@ -15981,7 +15981,7 @@ ul.flexbox {
 
 .sidebar-header .logo {
   font-size: 1rem;
-  font-weight: 500;
+  /*font-weight: 300;*/
   -webkit-box-flex: 1;
           flex-grow: 1;
 }
