@@ -2277,8 +2277,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
-  src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1) format("embedded-opentype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760) format("svg");
+  src: url(/public/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
+  src: url(/public/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1) format("embedded-opentype"), url(/public/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/public/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/public/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/public/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760) format("svg");
 }
 
 .glyphicon {
@@ -10317,8 +10317,8 @@ button.close {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713);
-  src: url(/fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713) format("embedded-opentype"), url(/fonts/vendor/font-awesome/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e) format("woff2"), url(/fonts/vendor/font-awesome/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad) format("woff"), url(/fonts/vendor/font-awesome/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9) format("truetype"), url(/fonts/vendor/font-awesome/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde) format("svg");
+  src: url(/public/fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713);
+  src: url(/public/fonts/vendor/font-awesome/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713) format("embedded-opentype"), url(/public/fonts/vendor/font-awesome/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e) format("woff2"), url(/public/fonts/vendor/font-awesome/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad) format("woff"), url(/public/fonts/vendor/font-awesome/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9) format("truetype"), url(/public/fonts/vendor/font-awesome/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -13365,8 +13365,8 @@ button.close {
 
 @font-face {
   font-family: 'themify';
-  src: url(/fonts/vendor/themify-icons-sass/themify-icons/themify.eot?2c454669bdf3aebf32a1bd8ac1e0d2d6);
-  src: url(/fonts/vendor/themify-icons-sass/themify-icons/themify.eot?2c454669bdf3aebf32a1bd8ac1e0d2d6) format("embedded-opentype"), url(/fonts/vendor/themify-icons-sass/themify-icons/themify.woff?a1ecc3b826d01251edddf29c3e4e1e97) format("woff"), url(/fonts/vendor/themify-icons-sass/themify-icons/themify.ttf?e23a7dcaefbde4e74e263247aa42ecd7) format("truetype"), url(/fonts/vendor/themify-icons-sass/themify-icons/themify.svg?9c8e96ecc7fa01e6ebcd196495ed2db5) format("svg");
+  src: url(/public/fonts/vendor/themify-icons-sass/themify-icons/themify.eot?2c454669bdf3aebf32a1bd8ac1e0d2d6);
+  src: url(/public/fonts/vendor/themify-icons-sass/themify-icons/themify.eot?2c454669bdf3aebf32a1bd8ac1e0d2d6) format("embedded-opentype"), url(/public/fonts/vendor/themify-icons-sass/themify-icons/themify.woff?a1ecc3b826d01251edddf29c3e4e1e97) format("woff"), url(/public/fonts/vendor/themify-icons-sass/themify-icons/themify.ttf?e23a7dcaefbde4e74e263247aa42ecd7) format("truetype"), url(/public/fonts/vendor/themify-icons-sass/themify-icons/themify.svg?9c8e96ecc7fa01e6ebcd196495ed2db5) format("svg");
   font-weight: normal;
   font-style: normal;
 }

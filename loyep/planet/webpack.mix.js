@@ -11,11 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.webpackConfig({
-    resolve: {
-        
-    }
-});
+mix.config.fileLoaderDirs.fonts = 'public/' + mix.config.fileLoaderDirs.fonts;
+
+console.log(mix.config);
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
