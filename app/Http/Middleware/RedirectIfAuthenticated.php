@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Loyep\Planet\Facades\Planet;
 
 class RedirectIfAuthenticated
 {
@@ -18,7 +19,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if ( Auth::guard($guard)->check() ) {
-            return redirect('/home');
+            return redirect(Planet::path());
         }
 
         return $next($request);

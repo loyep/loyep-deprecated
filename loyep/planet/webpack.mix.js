@@ -11,9 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.config.fileLoaderDirs.fonts = 'public/' + mix.config.fileLoaderDirs.fonts;
+mix
+    .setPublicPath('public')
+    .setResourceRoot('/planet-assets/')
+    .js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .copy('public', '../../public/planet-assets');
 
-console.log(mix.config);
-
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+if (mix.inProduction()) {
+    mix.version();
+} else {
+    mix.sourceMaps();
+}

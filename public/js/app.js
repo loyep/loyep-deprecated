@@ -7432,7 +7432,7 @@ jQuery.extend( {
 		}
 	},
 
-	// Not public - generate a queueHooks object, or return the current one
+	// Not planet-assets - generate a queueHooks object, or return the current one
 	_queueHooks: function( elem, type ) {
 		var key = type + "queueHooks";
 		return dataPriv.get( elem, key ) || dataPriv.access( elem, key, {
@@ -7992,7 +7992,7 @@ function on( elem, types, selector, data, fn, one ) {
 }
 
 /*
- * Helper functions for managing events -- not part of the public interface.
+ * Helper functions for managing events -- not part of the planet-assets interface.
  * Props to Dean Edwards' addEvent library for many of the ideas.
  */
 jQuery.event = {
@@ -40441,7 +40441,7 @@ function initRender (vm) {
   // args order: tag, data, children, normalizationType, alwaysNormalize
   // internal version is used by render functions compiled from templates
   vm._c = function (a, b, c, d) { return createElement(vm, a, b, c, d, false); };
-  // normalization is always applied for the public version, used in
+  // normalization is always applied for the planet-assets version, used in
   // user-written render functions.
   vm.$createElement = function (a, b, c, d) { return createElement(vm, a, b, c, d, true); };
 
@@ -40994,7 +40994,7 @@ function initGlobalAPI (Vue) {
   Object.defineProperty(Vue, 'config', configDef);
 
   // exposed util methods.
-  // NOTE: these are not considered part of the public API - avoid relying on
+  // NOTE: these are not considered part of the planet-assets API - avoid relying on
   // them unless you are aware of the risk.
   Vue.util = {
     warn: warn,
@@ -44485,7 +44485,7 @@ extend(Vue.options.components, platformComponents);
 // install platform patch function
 Vue.prototype.__patch__ = inBrowser ? patch : noop;
 
-// public mount method
+// planet-assets mount method
 Vue.prototype.$mount = function (
   el,
   hydrating

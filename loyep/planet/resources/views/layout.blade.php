@@ -9,12 +9,10 @@
     <title>{{ Planet::name() }}</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
+{{--<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">--}}
 
-    <!-- Styles -->
-    <link href="/planet-assets/css/core.min.css" rel="stylesheet">
-    <link href="/planet-assets/css/app.min.css" rel="stylesheet">
-    <link href="/planet-assets/css/style.min.css" rel="stylesheet">
+<!-- Styles -->
+    <link href="{{ mix('css/app.css', 'planet-assets') }}" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/planet-assets/img/apple-touch-icon.png">
@@ -22,16 +20,14 @@
 </head>
 
 <body>
-
 <!-- Preloader -->
-<div class="preloader">
-    <div class="spinner-dots">
-        <span class="dot1"></span>
-        <span class="dot2"></span>
-        <span class="dot3"></span>
-    </div>
-</div>
-
+{{--<div class="preloader">--}}
+{{--<div class="spinner-dots">--}}
+{{--<span class="dot1"></span>--}}
+{{--<span class="dot2"></span>--}}
+{{--<span class="dot3"></span>--}}
+{{--</div>--}}
+{{--</div>--}}
 
 <!-- Sidebar -->
 <aside class="sidebar sidebar-icons-right sidebar-icons-boxed sidebar-expand-lg">
@@ -119,7 +115,6 @@
                     </li>
                 </ul>
             </li>
-
         </ul>
     </nav>
 
@@ -139,7 +134,7 @@
         <ul class="topbar-btns">
             <li class="dropdown">
                 <span class="topbar-btn" data-toggle="dropdown">
-                    <img class="avatar" src="https://secure.gravatar.com/avatar/{{ md5(Auth::user()->email) }}?size=512"
+                    <img class="avatar" src="{{ getAvatar(Auth::user()->email) }}"
                          alt="..."></span>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="page/profile.html"><i class="ti-user"></i> Profile</a>
