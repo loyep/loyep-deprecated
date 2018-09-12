@@ -148,30 +148,6 @@ $brand-colors: map-merge((
         "rss": #f26522,
 ), $brand-colors);
 
-$font-lead: (
-        1: ($font-size-base * 1.125),
-        2: ($font-size-base * 1.25),
-        3: ($font-size-base * 1.5),
-        4: ($font-size-base * 1.75),
-        5: ($font-size-base * 2),
-        6: ($font-size-base * 2.5),
-        7: ($font-size-base * 3.25),
-        8: ($font-size-base * 4),
-        9: ($font-size-base * 5),
-) !default;
-
-$font-small: (
-        1: ($font-size-base * 0.9375),
-        2: ($font-size-base * 0.875),
-        3: ($font-size-base * 0.8125),
-        4: ($font-size-base * 0.75),
-        5: ($font-size-base * 0.6875),
-        6: ($font-size-base * 0.625),
-        7: ($font-size-base * 0.5625),
-        8: ($font-size-base * 0.5),
-        9: ($font-size-base * 0.4375),
-) !default;
-
 // Z-index master list
 //
 // $zindex-dropdown:                   1000 !default;
@@ -387,6 +363,30 @@ $text-muted: $gray-600 !default;
 
 $blockquote-small-color: $gray-600 !default;
 $blockquote-font-size: ($font-size-base * 1.25) !default;
+
+$font-lead: (
+        1: ($font-size-base * 1.125),
+        2: ($font-size-base * 1.25),
+        3: ($font-size-base * 1.5),
+        4: ($font-size-base * 1.75),
+        5: ($font-size-base * 2),
+        6: ($font-size-base * 2.5),
+        7: ($font-size-base * 3.25),
+        8: ($font-size-base * 4),
+        9: ($font-size-base * 5),
+) !default;
+
+$font-small: (
+        1: ($font-size-base * 0.9375),
+        2: ($font-size-base * 0.875),
+        3: ($font-size-base * 0.8125),
+        4: ($font-size-base * 0.75),
+        5: ($font-size-base * 0.6875),
+        6: ($font-size-base * 0.625),
+        7: ($font-size-base * 0.5625),
+        8: ($font-size-base * 0.5),
+        9: ($font-size-base * 0.4375),
+) !default;
 
 $hr-border-color: rgba($black, .1) !default;
 $hr-border-width: $border-width !default;
