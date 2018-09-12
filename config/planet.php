@@ -12,7 +12,7 @@ return [
     | or in other locations. Of course, you're free to change the value.
     |
     */
-    'name' => 'Planet Site',
+    'name' => 'Planet',
 
     /*
     |--------------------------------------------------------------------------

@@ -2,15 +2,15 @@
 
 namespace Loyep\Planet\Http\Controllers\Auth;
 
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Loyep\Planet\Facades\Planet;
 use Loyep\Planet\Http\Controllers\Controller;
+use Loyep\Planet\Traits\LockUsers;
 
-class LoginController extends Controller
+class LockController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Login Controller
+    | Lock Controller
     |--------------------------------------------------------------------------
     |
     | This controller handles authenticating users for the application and
@@ -19,7 +19,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use LockUsers;
 
     /**
      * Where to redirect users after login.
@@ -38,16 +38,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.guest')->except('logout');
-    }
-
-    /**
-     * Show the application's login form.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function showLoginForm()
-    {
-        return view('planet::auth.login');
+        $this->middleware('planet.auth');
     }
 }

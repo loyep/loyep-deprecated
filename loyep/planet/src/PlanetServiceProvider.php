@@ -2,20 +2,29 @@
 
 namespace Loyep\Planet;
 
+use Illuminate\Events\Dispatcher;
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
+use Loyep\Planet\Http\Middleware\Authenticate;
+use Loyep\Planet\Http\Middleware\RedirectIfAuthenticated;
 
 class PlanetServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap services.
      *
-     * @return void
+     * @param Router $router
+     * @param Dispatcher $dispatcher
      */
-    public function boot()
+    public function boot(Router $router, Dispatcher $dispatcher)
     {
         if ( $this->app->runningInConsole() ) {
             $this->registerPublishing();
         }
+
+        $router->aliasMiddleware('planet.auth', Authenticate::class);
+        $router->aliasMiddleware('planet.guest', RedirectIfAuthenticated::class);
 
         $this->registerResources();
     }

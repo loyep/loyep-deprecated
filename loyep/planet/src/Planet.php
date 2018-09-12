@@ -28,6 +28,10 @@ class Planet
 
             Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
             Route::post('login', 'Auth\LoginController@login');
+
+            Route::get('lock', 'Auth\LockController@showLockForm')->name('lock');
+            Route::post('lock', 'Auth\LockController@lock');
+
             Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 
@@ -48,6 +52,15 @@ class Planet
     }
 
     /**
+     * This namespace is applied to your controller routes.
+     *
+     * In addition, it is set as the URL generator's root namespace.
+     *
+     * @var string
+     */
+    protected $namespace = '\Loyep\Planet\Http\Controllers';
+
+    /**
      * Get the Nova route group configuration array.
      *
      * @return array
@@ -55,7 +68,7 @@ class Planet
     protected function routeConfiguration()
     {
         return [
-            'namespace' => '\Loyep\Planet\Http\Controllers',
+            'namespace' => $this->namespace,
             'as' => 'planet.',
             'prefix' => Planet::path(),
             'middleware' => ['web'],

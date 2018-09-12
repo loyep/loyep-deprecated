@@ -14,7 +14,7 @@ const mix = require('laravel-mix');
 mix
     .setPublicPath('public')
     .setResourceRoot('/planet-assets/')
-    .js('resources/js/app.js', 'public/js')
+    // .js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .copy('public', '../../public/planet-assets');
 

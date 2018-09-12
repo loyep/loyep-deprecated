@@ -116,7 +116,7 @@ $color-gray:             $gray-600 !default;
 $color-light:            $gray-100 !default;
 
 // Context colors
-$color-primary:          #33cabb !default;
+$color-primary:          #48b0f7 !default;
 $color-secondary:        #e4e7ea !default;
 $color-success:          $color-green !default; // 46be8a
 $color-info:             $color-blue !default;
@@ -248,10 +248,11 @@ $menu-light-submenu-bg:       #f7f9fa !default;
 
 // Sidebar
 $sidebar-header-bg:           $color-blue !default;
-$sidebar-dark-bg:             #3f4a59 !default;
-$sidebar-dark-submenu-bg:     #455160 !default;
-$sidebar-darker-bg:           #242a33 !default;//21252d
-$sidebar-darker-submenu-bg:   #2b323b !default;//2b303b
+
+$sidebar-dark-bg:             #242a33 !default;
+$sidebar-dark-submenu-bg:     #2b323b !default;
+$sidebar-darker-bg:           #3f4a59 !default;//21252d
+$sidebar-darker-submenu-bg:   #455160 !default;//2b303b
 $sidebar-light-submenu-bg:    #f7f9fa !default;
 $sidebar-padding-x:           12px !default;
 $sidebar-items-margin-x:      8px  !default;

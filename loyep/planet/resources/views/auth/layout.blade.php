@@ -1,82 +1,75 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
+    <meta name="keywords" content="login, signin">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <title>Login Page 2 &mdash; TheAdmin</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{--<link href="/planet-assets/css/core.min.css" rel="stylesheet">--}}
+    <link href="/planet-assets/css/app.css" rel="stylesheet">
+{{--<link href="/planet-assets/css/style.min.css" rel="stylesheet">--}}
+
+<!-- Favicons -->
+    <link rel="apple-touch-icon" href="/planet-assets/img/apple-touch-icon.png">
+    <link rel="icon" href="/planet-assets/img/favicon.png">
 </head>
-<body>
-<div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
+<body class="min-h-fullscreen bg-img center-vh p-20" style="background-image: url(/planet-assets/img/bg/2.jpg);"
+      data-overlay="7">
+@yield('content')
+{{--<div class="card card-round card-shadowed px-50 py-30 w-400px mb-0" style="max-width: 100%">--}}
+{{--<h5 class="text-uppercase">Sign in</h5>--}}
+{{--<br>--}}
 
-                </ul>
+{{--<form class="form-type-material">--}}
+{{--<div class="form-group">--}}
+{{--<input type="text" class="form-control" id="username">--}}
+{{--<label for="username">Username</label>--}}
+{{--</div>--}}
 
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('planet.login') }}">{{ __('Login') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('planet.register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+{{--<div class="form-group">--}}
+{{--<input type="password" class="form-control" id="password">--}}
+{{--<label for="password">Password</label>--}}
+{{--</div>--}}
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('planet.logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
+{{--<div class="form-group flexbox">--}}
+{{--<div class="custom-control custom-checkbox">--}}
+{{--<input type="checkbox" class="custom-control-input" checked>--}}
+{{--<label class="custom-control-label">Remember me</label>--}}
+{{--</div>--}}
 
-                                <form id="logout-form" action="{{ route('planet.logout') }}" method="POST"
-                                      style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
+{{--<a class="text-muted hover-primary fs-13" href="#">Forgot password?</a>--}}
+{{--</div>--}}
 
-    <main class="py-4">
-        @yield('content')
-    </main>
-</div>
+{{--<div class="form-group">--}}
+{{--<button class="btn btn-bold btn-block btn-primary" type="submit">Login</button>--}}
+{{--</div>--}}
+{{--</form>--}}
+
+{{--<div class="divider">Or Sign In With</div>--}}
+{{--<div class="text-center">--}}
+{{--<a class="btn btn-square btn-facebook" href="#"><i class="fa fa-facebook"></i></a>--}}
+{{--<a class="btn btn-square btn-google" href="#"><i class="fa fa-google"></i></a>--}}
+{{--<a class="btn btn-square btn-twitter" href="#"><i class="fa fa-twitter"></i></a>--}}
+{{--</div>--}}
+
+{{--<hr class="w-30px">--}}
+
+{{--<p class="text-center text-muted fs-13 mt-20">Don't have an account? <a class="text-primary fw-500" href="#">Sign--}}
+{{--up</a></p>--}}
+{{--</div>--}}
+
+<!-- Scripts -->
+<script src="/planet-assets/js/core.min.js"></script>
+<script src="/planet-assets/js/app.min.js"></script>
+<script src="/planet-assets/js/script.min.js"></script>
+
 </body>
 </html>

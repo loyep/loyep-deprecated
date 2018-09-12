@@ -30,14 +30,14 @@
 {{--</div>--}}
 
 <!-- Sidebar -->
-<aside class="sidebar sidebar-icons-right sidebar-icons-boxed sidebar-expand-lg">
+<aside class="sidebar sidebar-icons-right sidebar-icons-boxed sidebar-expand-lg sidebar-color-dark">
     <header class="sidebar-header">
-        <a class="logo-icon" href="{{ Planet::path() }}">
-            <img src="/planet-assets/img/logo-icon-light.png" alt="logo icon">
+        <a class="logo-icon" href="{{ route('planet.home') }}">
+            <img src="/planet-assets/img/logo-icon-light.png" alt="logo">
         </a>
         <span class="logo">
-            <a href="{{ Planet::path() }}">
-                {{ str_replace(' ', '',ucwords(Planet::name())) }}
+            <a href="{{ route('planet.home') }}">
+                {{ Planet::name() }}
                 {{--<img src="/planet-assets/img/logo-light.png" alt="logo">--}}
             </a>
         </span>
@@ -52,7 +52,7 @@
             <li class="menu-divider"></li>
 
             <li class="menu-item active">
-                <a class="menu-link" href="../dashboard/general.html">
+                <a class="menu-link" href="{{ route('planet.home') }}">
                     <span class="icon fa fa-home"></span>
                     <span class="title">Dashboard</span>
                 </a>
@@ -147,8 +147,8 @@
                     </a>
                     <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="page-extra/user-lock-1.html"><i class="ti-lock"></i> Lock</a>
-                    <a class="dropdown-item" href="page-extra/user-login-3.html"><i class="ti-power-off"></i> Logout</a>
+                    <a class="dropdown-item" href="{{ route('planet.lock') }}"><i class="ti-lock"></i> Lock</a>
+                    <a class="dropdown-item" href="{{ route('planet.logout') }}"><i class="ti-power-off"></i> Logout</a>
                 </div>
             </li>
 
@@ -203,34 +203,23 @@
                             <a href="#" data-provide="tooltip" title="Settings"><i class="fa fa-gear"></i></a>
                         </div>
                     </div>
-
                 </div>
             </li>
             <!-- END Notifications -->
-
         </ul>
-
     </div>
 </header>
 <!-- END Topbar -->
 
-
 <!-- Main container -->
 <main class="main-container">
     <div class="main-content">
-
-
         <div class="card">
             <h4 class="card-title">Card title</h4>
-
             <div class="card-body">
-
             </div>
         </div>
-
-
     </div><!--/.main-content -->
-
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -244,10 +233,8 @@
         </div>
     </footer>
     <!-- END Footer -->
-
 </main>
 <!-- END Main container -->
-
 
 <!-- Global quickview -->
 <div id="qv-global" class="quickview" data-url="/planet-assets/data/quickview-global.html">
