@@ -34,6 +34,8 @@ trait LockUsers
      */
     public function lock(Request $request)
     {
+        $username = $request->user()->id;
+        dd($username);
 //        $this->validateLogin($request);
 //
 //        // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -136,16 +138,6 @@ trait LockUsers
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.failed')],
         ]);
-    }
-
-    /**
-     * Get the login username to be used by the controller.
-     *
-     * @return string
-     */
-    public function username()
-    {
-        return 'email';
     }
 
     /**
