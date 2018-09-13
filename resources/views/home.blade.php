@@ -22,8 +22,8 @@
         <div class="navbar-left">
             <button class="navbar-toggler" type="button">&#9776;</button>
             <a class="navbar-brand" href="#">
-                <img class="logo-dark" src="{{ asset('img/logo/bootstrap-solid.png') }}" alt="logo">
-                <img class="logo-light" src="{{ asset('img/logo/bootstrap-punchout.png') }}" alt="logo">
+                <img class="logo-dark" src="{{ Loyep::asset('img/logo/bootstrap-solid.png') }}" alt="logo">
+                <img class="logo-light" src="{{ Loyep::asset('img/logo/bootstrap-punchout.png') }}" alt="logo">
             </a>
         </div>
 
@@ -37,16 +37,17 @@
                 <a class="nav-link" href="#">Blog</a>
             </nav>
         </section>
+
     </div>
 </nav>
 <!-- /.navbar -->
 <!-- Header -->
-<header class="header text-white h-fullscreen" style="background-image: url({{ asset('img/bg/1.jpg') }})">
+<header class="header text-white h-fullscreen" style="background-image: url({{ Loyep::asset('img/bg/1.jpg') }})">
     <div class="overlay opacity-90" style="background-color: #563d7c"></div>
     <div class="container text-center">
         <div class="row h-100">
             <div class="col-lg-8 mx-auto align-self-center">
-                <p><img src="{{ asset('img/logo/bootstrap.png') }}" alt="logo"></p>
+                <p><img src="{{ Loyep::asset('img/logo/bootstrap.png') }}" alt="logo"></p>
                 <h1 class="display-4 my-6"><strong>Bootstrap</strong></h1>
                 <p class="lead-3">The <b>most popular</b> HTML, CSS, and JS <b>framework</b> in the world for building
                     responsive, mobile-first projects <b>on the web</b>.</p>
@@ -111,7 +112,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <p><img src="{{ asset('img/icon/github.png') }}" alt="..."></p>
+                    <p><img src="{{ Loyep::asset('img/icon/github.png') }}" alt="..."></p>
                     <br>
                     <h3 class="mb-6"><strong>Fork the project on GitHub</strong></h3>
                     <p class="lead text-muted">Bootstrap is open source! It's hosted, developed, and maintained on
@@ -225,7 +226,7 @@
                         <p>Components</p>
                     </div>
                     <div class="px-5 mt-auto">
-                        <img class="shadow-4 opacity-80" src="{{ asset('img/preview/header-color.jpg') }}" alt="..."
+                        <img class="shadow-4 opacity-80" src="{{ Loyep::asset('img/preview/header-color.jpg') }}" alt="..."
                              data-aos="slide-up" data-aos-delay="300">
                     </div>
                 </div>
@@ -236,7 +237,7 @@
                         <p>Faster</p>
                     </div>
                     <div class="mt-auto">
-                        <img class="shadow-6" src="{{ asset('img/preview/header-gradient.jpg') }}" alt="..."
+                        <img class="shadow-6" src="{{ Loyep::asset('img/preview/header-gradient.jpg') }}" alt="..."
                              data-aos="slide-up">
                     </div>
                 </div>
@@ -247,7 +248,7 @@
                         <p>Colors</p>
                     </div>
                     <div class="px-5 mt-auto">
-                        <img class="shadow-4 opacity-80" src="{{ asset('img/preview/header-typing.jpg') }}" alt="..."
+                        <img class="shadow-4 opacity-80" src="{{ Loyep::asset('img/preview/header-typing.jpg') }}" alt="..."
                              data-aos="slide-up" data-aos-delay="600">
                     </div>
                 </div>
@@ -264,12 +265,12 @@
         <div class="container">
 
             <div class="partner partner-sm">
-                <img src="{{ asset('img/partner/1.png') }}" alt="partner 1">
-                <img src="{{ asset('img/partner/2.png') }}" alt="partner 2">
-                <img src="{{ asset('img/partner/3.png') }}" alt="partner 3">
-                <img src="{{ asset('img/partner/4.png') }}" alt="partner 4">
-                <img src="{{ asset('img/partner/5.png') }}" alt="partner 5">
-                <img src="{{ asset('img/partner/6.png') }}" alt="partner 6">
+                <img src="{{ Loyep::asset('img/partner/1.png') }}" alt="partner 1">
+                <img src="{{ Loyep::asset('img/partner/2.png') }}" alt="partner 2">
+                <img src="{{ Loyep::asset('img/partner/3.png') }}" alt="partner 3">
+                <img src="{{ Loyep::asset('img/partner/4.png') }}" alt="partner 4">
+                <img src="{{ Loyep::asset('img/partner/5.png') }}" alt="partner 5">
+                <img src="{{ Loyep::asset('img/partner/6.png') }}" alt="partner 6">
             </div>
 
         </div>
@@ -296,7 +297,7 @@
 </footer>
 <!-- /.footer -->
 <!-- Scripts -->
-<script src="{{ asset('js/page.min.js') }}"></script>
-<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ Loyep::asset('js/page.min.js') }}"></script>
+<script src="{{ Loyep::asset('js/script.js') }}"></script>
 </body>
 </html>
