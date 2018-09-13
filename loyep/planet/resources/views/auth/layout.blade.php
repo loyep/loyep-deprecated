@@ -6,14 +6,14 @@
     <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
     <meta name="keywords" content="login, signin">
 
-    <title>Login Page 2 &mdash; TheAdmin</title>
+    <title>@yield('title', Planet::name())</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
 
     <!-- Styles -->
     {{--<link href="/planet-assets/css/core.min.css" rel="stylesheet">--}}
-    <link href="/planet-assets/css/app.css" rel="stylesheet">
+    <link href="{{ mix('css/app.css', 'planet-assets') }}" rel="stylesheet">
 {{--<link href="/planet-assets/css/style.min.css" rel="stylesheet">--}}
 
 <!-- Favicons -->
@@ -21,8 +21,8 @@
     <link rel="icon" href="/planet-assets/img/favicon.png">
 </head>
 
-<body class="min-h-fullscreen bg-img center-vh p-20" style="background-image: url(/planet-assets/img/bg/2.jpg);"
-      data-overlay="7">
+<body>
+<div class="row min-h-fullscreen center-vh p-20 m-0">
 @yield('content')
 {{--<div class="card card-round card-shadowed px-50 py-30 w-400px mb-0" style="max-width: 100%">--}}
 {{--<h5 class="text-uppercase">Sign in</h5>--}}
@@ -67,9 +67,9 @@
 {{--</div>--}}
 
 <!-- Scripts -->
+</div>
 <script src="/planet-assets/js/core.min.js"></script>
 <script src="/planet-assets/js/app.min.js"></script>
 <script src="/planet-assets/js/script.min.js"></script>
-
 </body>
 </html>

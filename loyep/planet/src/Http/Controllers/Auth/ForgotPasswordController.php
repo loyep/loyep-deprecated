@@ -2,7 +2,9 @@
 
 namespace Loyep\Planet\Http\Controllers\Auth;
 
+use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Notifications\Messages\MailMessage;
 use Loyep\Planet\Http\Controllers\Controller;
 
 class ForgotPasswordController extends Controller
@@ -28,6 +30,13 @@ class ForgotPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('planet.guest');
+
+        ResetPassword::toMailUsing(function ($notifiable, $token) {
+            return (new MailMessage)
+                ->line(__('You are receiving this email because we received a password reset request for your account.'))
+                ->action(__('Reset Password'), url(config('app.url') . route('planet.password.reset', $token, false)))
+                ->line(__('If you did not request a password reset, no further action is required.'));
+        });
     }
 
     /**

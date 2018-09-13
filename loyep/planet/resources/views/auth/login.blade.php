@@ -39,14 +39,6 @@
                 <button class="btn btn-bold btn-block btn-info" type="submit">{{ __('Sign in') }}</button>
             </div>
         </form>
-
-        <div class="divider">Or Sign In With</div>
-        <div class="text-center">
-            <a class="btn btn-square btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
-            <a class="btn btn-square btn-google" href="#"><i class="fa fa-google"></i></a>
-            <a class="btn btn-square btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
-        </div>
-        <br>
         <p class="text-center text-muted fs-13 mt-20">{{ __('Still no account? Please go to') }}
             <a class="text-info fw-500" href="{{ route('planet.register') }}">{{ __('Sign up') }}</a>
         </p>

@@ -11,7 +11,7 @@
     <!-- Fonts -->
 {{--<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">--}}
 
-<!-- Styles -->
+    <!-- Styles -->
     <link href="{{ mix('css/app.css', 'planet-assets') }}" rel="stylesheet">
 
     <!-- Favicons -->
@@ -120,7 +120,6 @@
 
 </aside>
 <!-- END Sidebar -->
-
 
 <!-- Topbar -->
 <header class="topbar">
