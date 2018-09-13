@@ -39,7 +39,7 @@ return [
     */
     'cdn' => [
 
-        'url' => env('APP_URL', '/'),
+        'url' => env('APP_CDN_URL'),
     ],
 
     /*

@@ -14,7 +14,11 @@ class Loyep
     function asset($path, $secure = null)
     {
         $url = asset($path, $secure);
-        return str_replace(config('app.url'), config('loyep.cdn.url'), $url);
+        $cdnUrl = config('loyep.cdn.url');
+        if ( !empty($cdnUrl) ) {
+            $url = str_replace(config('app.url'), $cdnUrl, $url);
+        }
+        return $url;
     }
 
 }
