@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
-    <meta name="keywords" content="login, signin">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', Planet::name())</title>
 
@@ -12,17 +13,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
 
     <!-- Styles -->
-    {{--<link href="/planet-assets/css/core.min.css" rel="stylesheet">--}}
     <link href="{{ mix('css/app.css', 'planet-assets') }}" rel="stylesheet">
-{{--<link href="/planet-assets/css/style.min.css" rel="stylesheet">--}}
 
-<!-- Favicons -->
+    <!-- Favicons -->
     <link rel="apple-touch-icon" href="/planet-assets/img/apple-touch-icon.png">
     <link rel="icon" href="/planet-assets/img/favicon.png">
 </head>
-
 <body>
-<div class="row min-h-fullscreen center-vh p-20 m-0">
+<div id="app" class="row min-h-fullscreen center-vh p-20 m-0">
 @yield('content')
 {{--<div class="card card-round card-shadowed px-50 py-30 w-400px mb-0" style="max-width: 100%">--}}
 {{--<h5 class="text-uppercase">Sign in</h5>--}}
