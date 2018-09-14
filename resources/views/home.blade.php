@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', Planet::name())</title>
+    <title>@yield('title', config('app.name'))</title>
 
     <!-- Styles -->
     <link href="{{ mix("css/app.css") }}" rel="stylesheet">
@@ -17,8 +17,8 @@
 </head>
 <body>
 <div id="app">
-    @include('components.navbar.default')
-    <!-- Header -->
+@include('components.navbar.default')
+<!-- Header -->
     <header class="header text-white h-fullscreen" style="background-image: url({{ Loyep::asset('img/bg/1.jpg') }})">
         <div class="overlay opacity-90" style="background-color: #563d7c"></div>
         <div class="container text-center">
@@ -89,10 +89,10 @@
                         <p><img src="{{ Loyep::asset('img/icon/github.png') }}" alt="..."></p>
                         <br>
                         <h3 class="mb-6"><strong>Fork the project on GitHub</strong></h3>
-                        <p class="lead text-muted">Bootstrap is open source! It's hosted, developed, and maintained on
-                            GitHub by folks like you.</p>
+                        <p class="lead text-muted">A web site base laravel.</p>
                         <br>
-                        <a class="btn btn-lg btn-round btn-success px-7" href="#">View GitHub Project</a>
+                        <a class="btn btn-lg btn-round btn-success px-7" href="https://github.com/loyep/loyep">View
+                            GitHub Project</a>
                     </div>
                 </div>
             </div>
