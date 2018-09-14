@@ -18,7 +18,6 @@
 <body>
 <div id="app">
 @include('components.navbar.default')
-
 <!-- Header -->
     <header class="header text-center text-white"
             style="background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);">
@@ -26,10 +25,8 @@
 
             <div class="row">
                 <div class="col-md-8 mx-auto">
-
-                    <h1>Latest Blog Posts</h1>
+                    <h1>Posts</h1>
                     <p class="lead-2 opacity-90 mt-6">Read and get updated on how we progress</p>
-
                 </div>
             </div>
 
@@ -46,13 +43,17 @@
                         <div class="row gap-y">
                             <div class="col-md-6">
                                 <div class="card border hover-shadow-6 mb-6">
-                                    <a href="#"><img class="card-img-top" src="/img/thumb/1.jpg"
-                                                     alt="Card image cap"></a>
+                                    <a href="#">
+                                        <img class="card-img-top" src="/img/thumb/1.jpg" alt="Card image cap">
+                                    </a>
                                     <div class="p-6 text-center">
                                         <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">News</a>
                                         </p>
-                                        <h5 class="mb-0"><a class="text-dark" href="#">We relocated our office to a new
-                                                designed garage</a></h5>
+                                        <h5 class="mb-0">
+                                            <a class="text-dark" href="#">
+                                                We relocated our office to a new designed garage
+                                            </a>
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
@@ -60,8 +61,8 @@
 
                             <div class="col-md-6">
                                 <div class="card border hover-shadow-6 mb-6">
-                                    <a href="#"><img class="card-img-top" src="/img/thumb/2.jpg"
-                                                     alt="Card image cap"></a>
+                                    <a href="#">
+                                        <img class="card-img-top" src="/img/thumb/2.jpg" alt="Card image cap"></a>
                                     <div class="p-6 text-center">
                                         <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400"
                                               href="#">Marketing</a></p>
@@ -215,40 +216,7 @@
     </main>
 
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row gap-y align-items-center">
-
-                <div class="col-6 col-lg-3">
-                    <a href="#"><img src="/img/logo-dark.png" alt="logo"></a>
-                </div>
-
-                <div class="col-6 col-lg-3 text-right order-lg-last">
-                    <div class="social">
-                        <a class="social-facebook" href="#"><i
-                                    class="fa fa-facebook"></i></a>
-                        <a class="social-twitter" href="#"><i
-                                    class="fa fa-twitter"></i></a>
-                        <a class="social-instagram" href="#"><i
-                                    class="fa fa-instagram"></i></a>
-                        <a class="social-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="nav nav-bold nav-uppercase nav-trim justify-content-lg-center">
-                        <a class="nav-link" href="#">Elements</a>
-                        <a class="nav-link" href="#">Blocks</a>
-                        <a class="nav-link" href="#">About</a>
-                        <a class="nav-link" href="#">Blog</a>
-                        <a class="nav-link" href="#">Contact</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer><!-- /.footer -->
+    @include('components.footer.simple')
 </div>
 <!-- Scripts -->
 <script src="{{ Loyep::asset('js/page.js') }}"></script>

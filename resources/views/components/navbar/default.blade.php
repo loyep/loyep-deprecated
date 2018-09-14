@@ -4,7 +4,7 @@
 
         <div class="navbar-left">
             <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ url('/') }}">
                 <img class="logo-dark" src="{{ Loyep::asset('img/logo/bootstrap-solid.png') }}" alt="logo">
                 <img class="logo-light" src="{{ Loyep::asset('img/logo/bootstrap-punchout.png') }}" alt="logo">
             </a>
