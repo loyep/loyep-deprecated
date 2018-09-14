@@ -13,9 +13,9 @@
         <section class="navbar-mobile">
             <nav class="nav nav-navbar ml-auto">
                 <a class="nav-link active" href="{{ url('/') }}">首页</a>
-                <a class="nav-link" href="#">归档</a>
-                <a class="nav-link" href="#">分类</a>
-                <a class="nav-link" href="#">标签</a>
+                <a class="nav-link" href="{{ route('post.index') }}">归档</a>
+                <a class="nav-link" href="{{ route('category.index') }}">分类</a>
+                <a class="nav-link" href="{{ route('tag.index') }}">标签</a>
                 <a class="nav-link" href="#">相册</a>
                 <a class="nav-link" href="#">关于</a>
             </nav>
