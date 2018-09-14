@@ -1,5 +1,6 @@
 <!-- Footer -->
-<footer class="footer text-white bg-img bg-fixed" style="background-image: url({{ Loyep::asset('img/vector/9.jpg') }})" data-overlay="8">
+<footer class="footer text-white bg-img bg-fixed" style="background-image: url({{ Loyep::asset('img/vector/9.jpg') }})"
+        data-overlay="8">
     <div class="container py-7">
         <div class="row gap-y">
 
@@ -72,15 +73,16 @@
         <div class="row gap-y">
 
             <div class="col-md-6 text-center text-md-left">
-                <small class="opacity-70">© 2018 TheThemeio. All rights reserved.</small>
+                <small class="opacity-70">© 2018 {{ config('app.name') }}. All rights reserved.</small>
             </div>
 
             <div class="col-md-6 text-center text-md-right">
                 <div class="social">
+                    <a class="social-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
                     <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
                     <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
-                    <a class="social-youtube" href="#"><i class="fa fa-youtube"></i></a>
-                    <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                    <a class="social-weibo" href="#"><i class="fa fa-weibo"></i></a>
+                    <a class="social-github" href="#"><i class="fa fa-github"></i></a>
                 </div>
             </div>
 
