@@ -3,13 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
-    <meta name="keywords" content="blank, starter">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ Planet::name() }}</title>
-
-    <!-- Fonts -->
-{{--<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">--}}
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css', 'planet-assets') }}" rel="stylesheet">
@@ -248,6 +246,5 @@
 <script src="/planet-assets/js/core.min.js"></script>
 <script src="/planet-assets/js/app.min.js"></script>
 <script src="/planet-assets/js/script.min.js"></script>
-
 </body>
 </html>
