@@ -15,10 +15,15 @@ class Loyep
     {
         $url = asset($path, $secure);
         $cdnUrl = config('loyep.cdn.url');
-        if ( !empty($cdnUrl) ) {
+        if (!empty($cdnUrl)) {
             $url = str_replace(config('app.url'), $cdnUrl, $url);
         }
         return $url;
+    }
+
+    public function path()
+    {
+        return config('loyep.backend.path', 'admin');
     }
 
 }

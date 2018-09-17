@@ -15,6 +15,7 @@ class LoyepServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->routes();
+        $this->loadViewsFrom(resource_path('/loyep/views'), 'planet');
     }
 
     /**

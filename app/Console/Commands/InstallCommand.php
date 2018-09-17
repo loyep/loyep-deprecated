@@ -18,7 +18,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Install all of the loyep resources';
 
     /**
      * Create a new command instance.
@@ -33,10 +33,22 @@ class InstallCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return mixed
      */
     public function handle()
     {
+//        $this->comment('Publishing Planet Assets / Resources...');
+//        $this->callSilent('planet:publish');
+////
+//        $this->comment('Publishing Planet Service Provider...');
+//        $this->callSilent('vendor:publish', ['--tag' => 'planet-provider']);
+//
+//        $this->registerNovaServiceProvider();
+//
+////        $this->comment('Generating User Resource...');
+////        $this->callSilent('nova:resource', ['name' => 'User']);
+////        copy(__DIR__ . '/stubs/user-resource.stub', app_path('Nova/User.php'));
+////
+//        $this->info('Planet scaffolding installed successfully.');
         //
     }
 }
