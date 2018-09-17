@@ -171,8 +171,8 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\LoyepServiceProvider::class,
         App\Providers\PlanetServiceProvider::class,
+        App\Providers\LoyepServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateResourceMetasTable extends Migration
+class CreateModelMetasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateResourceMetasTable extends Migration
      */
     public function up()
     {
-        Schema::create('resource_metas', function (Blueprint $table) {
+        Schema::create('model_metas', function (Blueprint $table) {
             $table->unsignedInteger('meta_id');
-            $table->morphs('resource');
+            $table->morphs('model');
             $table->foreign('meta_id')->references('id')->on('metas')->onDelete('cascade');
-            $table->primary(['meta_id', 'resource_id', 'resource_type']);
+            $table->primary(['meta_id', 'model_id', 'model_type']);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateResourceMetasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('resource_metas');
+        Schema::dropIfExists('model_metas');
     }
 }
