@@ -29,7 +29,7 @@ class ForgotPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.guest');
+        $this->middleware('guest');
 
         ResetPassword::toMailUsing(function ($notifiable, $token) {
             return (new MailMessage)
@@ -46,7 +46,7 @@ class ForgotPasswordController extends Controller
      */
     public function showLinkRequestForm()
     {
-        return view('planet::auth.passwords.email');
+        return view('loyep::auth.passwords.email');
     }
 
 }

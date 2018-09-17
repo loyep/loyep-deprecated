@@ -29,7 +29,7 @@ class ResetPasswordController extends Controller
      */
     protected function redirectPath()
     {
-        return Planet::path();
+        return Loyep::path();
     }
 
     /**
@@ -39,7 +39,7 @@ class ResetPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.guest');
+        $this->middleware('guest');
     }
 
     /**

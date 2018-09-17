@@ -28,7 +28,7 @@ class LoginController extends Controller
      */
     protected function redirectPath()
     {
-        return Planet::path();
+        return Loyep::path();
     }
 
     /**
@@ -38,7 +38,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.guest')->except('logout');
+        $this->middleware('guest')->except('logout');
     }
 
     /**
@@ -48,6 +48,6 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('planet::auth.login');
+        return view('loyep::auth.login');
     }
 }

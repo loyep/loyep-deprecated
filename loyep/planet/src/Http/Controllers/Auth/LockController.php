@@ -28,7 +28,7 @@ class LockController extends Controller
      */
     protected function redirectPath()
     {
-        return Planet::path();
+        return Loyep::path();
     }
 
     /**
@@ -38,6 +38,6 @@ class LockController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.auth');
+        $this->middleware('auth');
     }
 }

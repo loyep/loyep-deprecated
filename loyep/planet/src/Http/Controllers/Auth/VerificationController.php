@@ -29,7 +29,7 @@ class VerificationController extends Controller
      */
     protected function redirectPath()
     {
-        return Planet::path();
+        return Loyep::path();
     }
 
     /**
@@ -39,7 +39,7 @@ class VerificationController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.auth');
+        $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
@@ -54,6 +54,6 @@ class VerificationController extends Controller
     {
         return $request->user()->hasVerifiedEmail()
             ? redirect($this->redirectPath())
-            : view('planet::auth.verify');
+            : view('loyep::auth.verify');
     }
 }
