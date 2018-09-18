@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Loyep;
+namespace Loyep\Planet\Http\Controllers\Loyep;
 
-use App\Http\Controllers\Controller;
+use Loyep\Planet\Http\Controllers\Controller;
 
 class LoyepController extends Controller
 {

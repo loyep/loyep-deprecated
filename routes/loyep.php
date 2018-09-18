@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Loyep Admin Routes
@@ -13,4 +11,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Loyep::routes();
+Loyep::routes(['register' => true]);

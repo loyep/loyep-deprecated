@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Loyep\Planet\Facades\Planet;
 
 class LoginController extends Controller
 {
@@ -38,7 +37,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.guest')->except('logout');
+        $this->middleware('guest')->except('logout');
     }
 
     /**
@@ -48,6 +47,6 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('planet::auth.login');
+        return view('loyep::auth.login');
     }
 }

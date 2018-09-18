@@ -1,11 +1,11 @@
 <?php
 
-namespace Loyep\Planet\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Notifications\Messages\MailMessage;
-use Loyep\Planet\Http\Controllers\Controller;
 
 class ForgotPasswordController extends Controller
 {
@@ -29,7 +29,7 @@ class ForgotPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.guest');
+        $this->middleware('guest');
 
         ResetPassword::toMailUsing(function ($notifiable, $token) {
             return (new MailMessage)
@@ -46,7 +46,7 @@ class ForgotPasswordController extends Controller
      */
     public function showLinkRequestForm()
     {
-        return view('planet::auth.passwords.email');
+        return view('loyep::auth.passwords.email');
     }
 
 }

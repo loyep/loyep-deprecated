@@ -81,4 +81,7 @@ class Loyep
         ];
     }
 
+    public function name() {
+        return '';
+    }
 }

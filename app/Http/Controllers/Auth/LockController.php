@@ -39,6 +39,6 @@ class LockController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.auth');
+        $this->middleware('auth');
     }
 }

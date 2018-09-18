@@ -5,7 +5,7 @@
 @section('content')
     <div class="card card-round card-shadowed px-50 py-30 w-400px mb-0 text-center" style="max-width: 100%">
         <div>
-            <img class="avatar avatar-xxl mb-30" src="{{ getAvatar(Auth::user()->email) }}" alt="...">
+{{--            <img class="avatar avatar-xxl mb-30" src="{{ getAvatar(Auth::user()->email) }}" alt="...">--}}
             <h5 class="lead">{{ Auth::user()->name }}</h5>
             <small>{{ __('Enter your password to retrieve your session') }}</small>
         </div>

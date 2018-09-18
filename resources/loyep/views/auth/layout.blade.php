@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', Planet::name())</title>
+    <title>@yield('title', Loyep::name())</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">

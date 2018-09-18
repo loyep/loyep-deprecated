@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
-use Loyep\Planet\Facades\Planet;
 
 class ResetPasswordController extends Controller
 {
@@ -39,7 +38,7 @@ class ResetPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('planet.guest');
+        $this->middleware('guest');
     }
 
     /**
@@ -53,7 +52,7 @@ class ResetPasswordController extends Controller
      */
     public function showResetForm(Request $request, $token = null)
     {
-        return view('planet::auth.passwords.reset')->with(
+        return view('loyep::auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }
